@@ -22,7 +22,6 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.CALCULATOR.R
 import com.example.CALCULATOR.ui.theme.CALCULATORTheme
 import net.objecthunter.exp4j.ExpressionBuilder
 
@@ -103,6 +102,7 @@ fun Calculator(isDarkMode: Boolean, onThemeChange: (Boolean) -> Unit) {
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly) {
                 CalculatorButton(text = "(") { input = TextFieldValue(input.text + "(") }
                 CalculatorButton(text = ")") { input = TextFieldValue(input.text + ")") }
+                CalculatorButton(text = "%") { input = TextFieldValue(input.text + "%") }
                 CalculatorButton(text = "C") { input = TextFieldValue("") }
                 CalculatorButton(text = "⇦") { input = TextFieldValue(input.text.dropLast(1)) }
             }
