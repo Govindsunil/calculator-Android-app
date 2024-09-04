@@ -1,4 +1,4 @@
-package com.example.logindesign
+package com.example.CALCULATOR
 
 import org.junit.Test
 

@@ -1,4 +1,6 @@
-package com.example.logindesign
+
+// I us
+package com.example.CALCULATOR
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -20,7 +22,8 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.logindesign.ui.theme.LoginDesignTheme
+import com.example.CALCULATOR.R
+import com.example.CALCULATOR.ui.theme.CALCULATORTheme
 import net.objecthunter.exp4j.ExpressionBuilder
 
 class MainActivity : ComponentActivity() {
@@ -28,7 +31,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             var isDarkMode by remember { mutableStateOf(false) }
-            LoginDesignTheme(darkTheme = isDarkMode) {
+            CALCULATORTheme(darkTheme = isDarkMode) {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
@@ -101,7 +104,7 @@ fun Calculator(isDarkMode: Boolean, onThemeChange: (Boolean) -> Unit) {
                 CalculatorButton(text = "(") { input = TextFieldValue(input.text + "(") }
                 CalculatorButton(text = ")") { input = TextFieldValue(input.text + ")") }
                 CalculatorButton(text = "C") { input = TextFieldValue("") }
-                CalculatorButton(text = "←") { input = TextFieldValue(input.text.dropLast(1)) }
+                CalculatorButton(text = "⇦") { input = TextFieldValue(input.text.dropLast(1)) }
             }
 
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly) {
@@ -162,7 +165,7 @@ fun evaluateExpression(expression: String): String {
 @Composable
 fun CalculatorPreview() {
     var isDarkMode by remember { mutableStateOf(false) }
-    LoginDesignTheme(darkTheme = isDarkMode) {
+    CALCULATORTheme(darkTheme = isDarkMode) {
         Calculator(isDarkMode) { isDarkMode = it }
     }
 }

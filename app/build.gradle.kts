@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.logindesign"
+    namespace = "com.example.CALCULATOR"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.example.logindesign"
+        applicationId = "com.example.CALCULATOR"
         minSdk = 27
         targetSdk = 33
         versionCode = 1
